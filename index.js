@@ -39,6 +39,22 @@ function addClickListener() {
         user.push(3);
       }
     });
+    address[i].addEventListener("touchstart", function(req) {
+      console.log(req.target.attributes.class.nodeValue);
+      if (req.target.attributes.class.nodeValue === "green clickedbox") {
+        makeBoxSound(0);
+        user.push(0);
+      } else if (req.target.attributes.class.nodeValue === "red clickedbox") {
+        makeBoxSound(1);
+        user.push(1);
+      } else if (req.target.attributes.class.nodeValue === "yellow clickedbox") {
+        makeBoxSound(2);
+        user.push(2);
+      } else if (req.target.attributes.class.nodeValue === "blue clickedbox") {
+        makeBoxSound(3);
+        user.push(3);
+      }
+    });
   }
 }
 
